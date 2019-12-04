@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,29 @@ namespace Chat
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+
+		private void ConnectButton_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				var ipAddress = IPAddress.Parse(IpAdressInput.Text);
+				var client = new TcpClient();
+				client.Connect(ipAddress, 5000);
+				
+			}
+			catch(FormatException)
+			{
+				MessageBox.Show("Ungültige IP Adresse. Bitte erneut versuchen!");
+			}
+			catch (SocketException)
+			{
+				MessageBox.Show("Server nicht erreichbar");
+			}
+
+
+
+
 		}
 	}
 }
