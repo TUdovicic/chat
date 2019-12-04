@@ -8,13 +8,13 @@
         Title="MainWindow" Height="550" Width="900">
    <Grid>
       <Grid.Background>
-         <ImageBrush ImageSource="google.jpg"/>
+         <ImageBrush ImageSource="style.jpg"/>
       </Grid.Background>
-      <TextBox Padding="4" x:Name="IpAdressInput" HorizontalAlignment="Left" Height="27" Margin="87,38,0,0" TextWrapping="Wrap" Text="127.0.0.0" VerticalAlignment="Top" Width="203" FontFamily="Verdana" FontSize="14"/>
+      <TextBox Padding="4" x:Name="IpAdressInput" HorizontalAlignment="Left" Height="27" Margin="87,38,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Width="203" FontFamily="Verdana" FontSize="14"/>
 
-      <TextBlock x:Name="ChatText" Padding="15,10,5,5" HorizontalAlignment="Left" Margin="87,151,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="246" Width="717" Foreground="White" FontSize="18">
+      <TextBlock x:Name="ChatText" Padding="15,10,5,5" HorizontalAlignment="Left" Margin="87,151,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="246" Width="717" Foreground="White" FontSize="18" Opacity="0.2">
          <TextBlock.Background>
-            <ImageBrush ImageSource="whatsapp.jpg" Opacity="0.95" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="blabla.jpg" Opacity="0.95" Stretch="UniformToFill"/>
          </TextBlock.Background>
          <TextBlock.Effect>
             <DropShadowEffect Opacity="0.5"/>
@@ -25,18 +25,18 @@
       </TextBlock>
 
 
-      <Button x:Name="ConnectButton" Content="Connect to Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Margin="87,77,0,0" Height="37" Click="ConnectButton_Click" FontFamily="Verdana" FontSize="14" FontWeight="Bold"/>
+      <Button x:Name="ConnectButton" Content="Connect to Chat" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" Margin="87,77,0,0" Height="37" Click="ConnectButton_Click" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Opacity="0.7"/>
       <TextBox x:Name="MessageInput" HorizontalAlignment="Left" Height="40" Margin="87,422,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="621">
          <TextBox.Effect>
             <DropShadowEffect Opacity="0.3"/>
          </TextBox.Effect>
       </TextBox>
-      <Button x:Name="SendButton" Content="Send " HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="714,422,0,0" Height="40" FontFamily="Verdana" FontSize="14" FontWeight="Bold">
+      <Button IsEnabled ="False" x:Name="SendButton" Content="Send " HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="715,422,0,0" Height="40" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Opacity="0.7" Click="SendButton_Click">
          <Button.Effect>
             <DropShadowEffect Opacity="0.2" Color="#FF5F2B2B"/>
          </Button.Effect>
       </Button>
-      <Border BorderThickness="1" HorizontalAlignment="Left" Height="7" Margin="0,122,0,0" VerticalAlignment="Top" Width="890" RenderTransformOrigin="0.5,0.5" Background="#FFF63B56">
+      <Border BorderThickness="1" HorizontalAlignment="Left" Height="7" Margin="-1,125,0,0" VerticalAlignment="Top" Width="890" RenderTransformOrigin="0.5,0.5" Background="#FFEC8383">
          <Border.RenderTransform>
             <TransformGroup>
 
@@ -48,6 +48,7 @@
          </Border.RenderTransform>
       </Border>
       <Label x:Name="IP_Adresse" Content="IP-Adresse" HorizontalAlignment="Left" Margin="187,38,0,0" VerticalAlignment="Top" Width="157" FontSize="14" FontFamily="Verdana" FontWeight="Bold"/>
+      <Label Content="Developer-Chat" HorizontalAlignment="Left" Margin="306,31,0,0" VerticalAlignment="Top" Width="546" FontFamily="Javanese Text" FontSize="48" FontWeight="Bold"/>
 
    </Grid>
 </Window>

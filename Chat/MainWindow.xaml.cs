@@ -22,6 +22,7 @@ namespace Chat
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		TcpClient client;
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -32,8 +33,11 @@ namespace Chat
 			try
 			{
 				var ipAddress = IPAddress.Parse(IpAdressInput.Text);
-				var client = new TcpClient();
+				client = new TcpClient();
 				client.Connect(ipAddress, 5000);
+
+
+				SendButton.IsEnabled = true;
 				
 			}
 			catch(FormatException)
@@ -44,10 +48,18 @@ namespace Chat
 			{
 				MessageBox.Show("Server nicht erreichbar");
 			}
+			
+		}
 
+		private void SendButton_Click(object sender, RoutedEventArgs e)
+		{
+			var messageText = MessageInput.Text;
+			MessageInput.Text = string.Empty;
 
+			var stream = client.GetStream();
 
-
+			var messageTextBytes = Encoding.ASCII.GetBytes(messageText);//schreiben auf dem Network-Stream nur mit Binärzahlen möglch
+			stream.Write(messageTextBytes, 0, messageTextBytes.Length);
 		}
 	}
 }

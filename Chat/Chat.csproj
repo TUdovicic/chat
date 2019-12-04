@@ -99,5 +99,14 @@
   <ItemGroup>
     <Resource Include="whatsapp.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chat1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="blabla.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="style.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
