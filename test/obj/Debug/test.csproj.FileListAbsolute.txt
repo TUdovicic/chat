@@ -1,0 +1,6 @@
+C:\Users\tomislav.udovicic\source\repos\Chat\test\bin\Debug\test.exe.config
+C:\Users\tomislav.udovicic\source\repos\Chat\test\bin\Debug\test.exe
+C:\Users\tomislav.udovicic\source\repos\Chat\test\bin\Debug\test.pdb
+C:\Users\tomislav.udovicic\source\repos\Chat\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\tomislav.udovicic\source\repos\Chat\test\obj\Debug\test.exe
+C:\Users\tomislav.udovicic\source\repos\Chat\test\obj\Debug\test.pdb
